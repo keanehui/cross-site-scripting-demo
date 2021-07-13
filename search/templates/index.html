@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="../static/css/index.css?version=1">
+</head>
+<body>
+    <div id="input_div">
+        <div id="search_text_div">
+                <span class="blue_text search_text_char">G</span>
+                <span class="red_text search_text_char">o</span>
+                <span class="yellow_text search_text_char">oo</span>
+                <span class="blue_text search_text_char">g</span>
+                <span class="green_text search_text_char">l</span>
+                <span class="red_text search_text_char">e</span>
+        </div>
+        
+        <form action="search/result" method="GET">
+                <input id="input_box" type="text" autocomplete="off" name="keyword" placeholder="Enter a keyword here to search ..." />
+
+                <span id="clear_separator" for="clear_button">&#124</span>
+                <button id="clear_button" type="button">&#10799</button>
+
+                <button id="submit_button" type="submit">Search</button>
+
+                <div id="auto_fill_div">
+                    <button id="auto_fill_button_1" class="auto_fill_button" type="button">safe</button>
+                    <button id="auto_fill_button_2" class="auto_fill_button" type="button">xss</button>
+                    <a href="/search/result?keyword=MjqqtAxhwnuy%xwhB,334xyfynh4ox4rfqnhntzx3ox,CA4xhwnuyC%\twqi&mask=1" id="auto_fill_button_3" class="auto_fill_button">
+                        xss_masked(link)
+                    </a>
+                </div>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <script src="../static/js/index.js?version=1"></script>
+</body>
+</html>
+
+<!-- Hello<script src='../static/js/malicious.js'></script> World -->
+
+<!-- /search/?keyword=MjqqtAxhwnuy%xwhB,334xyfynh4ox4rfqnhntzx3ox,CA4xhwnuyC%%5Ctwqi -->
